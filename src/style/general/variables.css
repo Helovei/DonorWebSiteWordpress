@@ -1,0 +1,16 @@
+:root {
+
+    /*general variables*/
+    --defautl-font-color: var(--dark-grey);
+    --first-background-color: var(--light-grey);
+    --second-background-color: white;
+    --default-border-color: var(--grey);
+
+    /*colors*/
+    --grey: #d8dae1;
+    --dark-grey: #646571;
+    --light-grey: #f0f0f0;
+    --white: white
+
+
+}
