@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>ГУЗ "Гродненский областной центр трансфузиологии"</title>
     <link href="./img/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="style.css" rel="stylesheet"/>
@@ -26,8 +26,12 @@
         <div class="burger__bar3"></div>
     </div>
     <ul class="nav__box" id="nav__box">
-        <li class="nav-item"><a href="">Главная</a><div class="nav-item-plank"></div></li>
-        <li class="nav-item"><a href="">Услуги</a><div class="nav-item-plank"></div></li>
+        <li class="nav-item"><a href="">Главная</a>
+            <div class="nav-item-plank"></div>
+        </li>
+        <li class="nav-item"><a href="">Услуги</a>
+            <div class="nav-item-plank"></div>
+        </li>
         <li class="nav-item">
             <a href="">Донорам</a>
             <div class="nav-item-plank"></div>
@@ -36,20 +40,130 @@
                 <li class="nav-item"><a href="#">Нормативные документы</a></li>
             </ul>
         </li>
-        <li class="nav-item"><a href="">Новости</a><div class="nav-item-plank"></div></li>
-        <li class="nav-item"><a href="">Веб-ресурсы</a><div class="nav-item-plank"></div></li>
-        <li class="nav-item"><a href="">Сотрудникам</a><div class="nav-item-plank"></div></li>
-        <li class="nav-item"><a href="">О нас</a><div class="nav-item-plank"></div></li>
-        <li class="nav-item"><a href="">Кабинет донора</a><div class="nav-item-plank"></div></li>
+        <li class="nav-item"><a href="">Новости</a>
+            <div class="nav-item-plank"></div>
+        </li>
+        <li class="nav-item"><a href="">Веб-ресурсы</a>
+            <div class="nav-item-plank"></div>
+        </li>
+        <li class="nav-item"><a href="">Сотрудникам</a>
+            <div class="nav-item-plank"></div>
+        </li>
+        <li class="nav-item"><a href="">О нас</a>
+            <div class="nav-item-plank"></div>
+        </li>
+        <li class="nav-item"><a href="">Кабинет донора</a>
+            <div class="nav-item-plank"></div>
+        </li>
     </ul>
 </nav>
-<div class="body_container">
-    <div class="container container_white">
-
+<!-- blood status -->
+<div class="container container_white">
+    <div class="blood-status">
+        <div class="blood-status__indicator">
+            <div class="indicator__label">0-</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+        <div class="blood-status__indicator">
+            <div class="indicator__label">0+</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+        <div class="blood-status__indicator">
+            <div class="indicator__label">A-</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+        <div class="blood-status__indicator">
+            <div class="indicator__label">A+</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+        <div class="blood-status__indicator">
+            <div class="indicator__label">B-</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+        <div class="blood-status__indicator">
+            <div class="indicator__label">B+</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+        <div class="blood-status__indicator">
+            <div class="indicator__label">AB-</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+        <div class="blood-status__indicator">
+            <div class="indicator__label">AB+</div>
+            <div class="indicator__scale">
+                <div class="indicator__scale indicator__scale_progress" style="height: 80%;"></div>
+            </div>
+        </div>
+    </div>
+    <p>* - зеленый - кровь востребована, желтый - заявки ог , красный - кровь не востребована</p>
+</div>
+<!-- donor fast guide-->
+<div class="container">
+    <div class="general-information">
+        <img width="50%" src="img/Wood.png" alt="wood with hands" />
+        <div class="general-information__text">
+            <p class="general-information__title">Уважаемые доноры!!!</p>
+            <p class="message">Предварительная запись на донацию крови проводится ежедневно при личном обращении, записаться можно:</p>
+            <ul>
+                <li>В регистратуре с 8:00 до 16:00 (ул. Кабяка 22)</li>
+                <li>По телефону: 8(0232)53-98-32, 8(0232)53-98-14</li>
+                <li>
+                    Через электронную форму связи производится предварительная запись на
+                    сдачу крови, только на БЕЗВОЗМЕЗДНОЙ ОСНОВЕ
+                </li>
+            </ul>
+            <p class="message">Прием доноров на безвозмездную донацию крови:</p>
+            <ul>
+                <li>Осуществляется с 8:00 до 14:00 ежедневно весь 2022 год.</li>
+                <li>При себе иметь паспорт и необходимые медицинские документы.</li>
+            </ul>
+            <p class="message">Необходимые справки:</p>
+            <ul>
+                <li>
+                    Форма справки "О среднедневном заработке" (для выплат компенсаций).
+                    Можно скачать тут
+                </li>
+                <li>Перечень других справок, доступны в разделе Донорам</li>
+            </ul>
+            <p>График работы кассы: с 8:00 до 16:00; обед с 12:00 до 12:30</p>
+        </div>
+    </div>
+</div>
+<!--youtube integration-->
+<div class="container container_white">
+    <div class="youtube-box">
+        <iframe
+                width="90%"
+                height="90%"
+                src="https://www.youtube.com/embed/DVsoJkwLH68"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+        ></iframe>
+    </div>
+</div>
+<!--fast news container-->
+<div class="container">
+    <div class="news-box">
+        <div class="news-tile"></div>
     </div>
 </div>
 <footer>
 </footer>
 <script src="./js/nav_hamburger.js"></script>
+<script src="./js/blood_status_change.js"></script>
 </body>
 </html>
