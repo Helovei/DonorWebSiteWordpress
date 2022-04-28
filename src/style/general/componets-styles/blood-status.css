@@ -1,0 +1,59 @@
+.blood-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    width: 100%;
+    height: 100%;
+}
+
+.blood-status__indicator {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.indicator__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    font-size: 1.5rem;
+    border: 1px solid var(--default-border-color);
+}
+
+.indicator__label_red {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.indicator__label_green {
+    background-color: var(--green);
+
+}
+
+.indicator__label_yellow {
+    background-color: var(--yellow);
+}
+
+.indicator__scale {
+    display: flex;
+    align-items: end;
+    border-radius: 50px;
+    max-height: 100%;
+    height: 60%;
+    width: 4vw;
+    border: 1px solid var(--default-border-color);
+    background-color: var(--light-grey);
+
+}
+
+.indicator__scale_progress {
+    border: none;
+    background-color: var(--red);
+}
