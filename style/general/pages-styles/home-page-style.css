@@ -1,6 +1,6 @@
-﻿@import "../general/componets-styles/blood-status.css";
-@import "../general/componets-styles/news-tile.css";
-
+﻿@import "../componets-styles/blood-status.css";
+@import "../componets-styles/news-tile.css";
+@import "../componets-styles/statistics.css";
 .body_container {
     display: flex;
     flex-direction: column;

@@ -5,6 +5,7 @@
     --first-background-color: var(--light-grey);
     --second-background-color: white;
     --default-border-color: var(--grey);
+    --default-border: 1px solid var(--default-border-color);
 
     /*colors*/
     --grey: #d8dae1;
@@ -15,5 +16,7 @@
     --green: #6bdb6b;
     --yellow: #ffff00;
 
+    /*effects*/
+    --default-shadow-box: 0 0 10px #ccc;
 
 }

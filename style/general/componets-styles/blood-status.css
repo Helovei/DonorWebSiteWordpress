@@ -44,7 +44,7 @@
     align-items: end;
     border-radius: 50px;
     max-height: 100%;
-    height: 30rem;
+    height: 450px;
     width: 4vw;
     border: 1px solid var(--default-border-color);
     background-color: var(--light-grey);
@@ -54,4 +54,22 @@
 .indicator__scale_progress {
     border: none;
     background-color: var(--red);
+}
+
+@media screen and (max-width: 1024px) {
+    .indicator__scale {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .indicator__scale {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .indicator__scale {
+        height: 100px;
+    }
 }

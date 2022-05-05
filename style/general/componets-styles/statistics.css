@@ -1,0 +1,44 @@
+.graph-box {
+    border-radius: 25px;
+    border: 1px solid var(--default-border-color);
+    height: 25rem;
+    width: 80%;
+    /*box-shadow: var(--default-shadow-box);*/
+}
+
+.number-of-people {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.number-of-people__counter{
+    /*box-shadow: var(--default-shadow-box);*/
+    width: 25rem;
+    height: 27rem;
+    border-radius: 25px;
+    border: 1px solid var(--default-border-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter__value {
+    color: var(--green);
+}
+
+.counter__plank {
+    background-color: var(--light-grey);
+    height: 2px;
+    width: 80%;
+}
+
+.counter__information {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

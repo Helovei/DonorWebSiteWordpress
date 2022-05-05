@@ -1,0 +1,15 @@
+/*
+Theme Name: Donor Theme
+Theme URI:
+Author: Helovei
+Author URI: github.com/Helovei
+Description: This theme was create for blood transfusion station from Grodno
+Version: 1.0
+*/
+
+@import "./style/general/general-style.css";
+@import "./style/general/pages-styles/home-page-style.css";
+@import "./style/general/pages-styles/about-us-style.css";
+@import "./style/general/pages-styles/services-page-styles.css";
+@import "style/general/pages-styles/category-news-styles.css";
+@import "./style/general/pages-styles/page.css";

@@ -1,0 +1,46 @@
+.buildings-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+}
+
+.building-information {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.building-information__box {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.building-information__name {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.building-information__map {
+    width: 30rem;
+    height: 27rem;
+}
+
+.building-information__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-us__plank {
+    width: 90%;
+    height: 3px;
+    background-color: var(--grey);
+    border-radius: 10px;
+}

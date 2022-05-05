@@ -1,0 +1,66 @@
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.header__box {
+    display: flex;
+    gap: 2vw;
+}
+
+.header__contacts{
+    display: flex;
+    text-align: center;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.contacts__item {
+    display: flex;
+    gap: 2px;
+}
+
+.contacts__item__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts__item__icon {
+    height: 32px;
+    width: 32px;
+}
+
+.header_title-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.header_title {
+    font-size: 2.5rem;
+}
+
+.header_subtitle {
+    font-size: 1.2rem;
+}
+
+.header_slogan {
+    font-size: 1rem;
+    text-align: right;
+}
+
+.header_logo {
+    width: 8vw;
+    height: 8vw;
+}
+
+@media screen and (max-width: 768px){
+    .contacts__item__icon{
+        height: 16px;
+        width: 16px;
+    }
+}

@@ -1,64 +1,14 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-          name="viewport">
-    <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>ГУЗ "Гродненский областной центр трансфузиологии"</title>
-    <link href="./img/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
-</head>
-<body>
-<header>
-    <img alt="logo" class="header_logo" src="./img/logo.png"/>
-    <div class="header_title-box">
-        <p class="header_subtitle">Государственное учереждение здравоохранения</p>
-        <p class="header_title">Гродненский областной центр трансфузиологии</p>
-        <p class="header_slogan">Стань донором - спаси одну жизнь!</p>
-    </div>
-</header>
-<nav role="navigation">
-    <div class="nav__burger" id="nav__burger">
-        <div class="burger__bar1"></div>
-        <div class="burger__bar2"></div>
-        <div class="burger__bar3"></div>
-    </div>
-    <ul class="nav__box" id="nav__box">
-        <li class="nav-item"><a href="">Главная</a>
-            <div class="nav-item-plank"></div>
-        </li>
-        <li class="nav-item"><a href="">Услуги</a>
-            <div class="nav-item-plank"></div>
-        </li>
-        <li class="nav-item">
-            <a href="">Донорам</a>
-            <div class="nav-item-plank"></div>
-            <ul class="nav__submenu">
-                <li class="nav-item"><a href="#">Часто задаваемые вопросы</a></li>
-                <li class="nav-item"><a href="#">Нормативные документы</a></li>
-            </ul>
-        </li>
-        <li class="nav-item"><a href="">Новости</a>
-            <div class="nav-item-plank"></div>
-        </li>
-        <li class="nav-item"><a href="">Веб-ресурсы</a>
-            <div class="nav-item-plank"></div>
-        </li>
-        <li class="nav-item"><a href="">Сотрудникам</a>
-            <div class="nav-item-plank"></div>
-        </li>
-        <li class="nav-item"><a href="">О нас</a>
-            <div class="nav-item-plank"></div>
-        </li>
-        <li class="nav-item"><a href="">Кабинет донора</a>
-            <div class="nav-item-plank"></div>
-        </li>
-    </ul>
-</nav>
+<?php
+
+/**
+ * Template Name: Home page
+ * Template Post Type: post, page
+ */
+
+get_header(); ?>
 <!-- blood status -->
 <div class="container container_white">
+    <p class="container__name text_center">Потребность крови и ее компонентов</p>
     <div class="blood-status">
         <div class="blood-status__indicator">
             <div class="indicator__label">0-</div>
@@ -109,15 +59,18 @@
             </div>
         </div>
     </div>
-    <p>* - зеленый - кровь востребована, желтый - заявки ог , красный - кровь не востребована</p>
+    <p>* - зеленый - высокая потребность в донорах, желтый - небольшая потребность в донорах , красный - потребность в
+        донорах отсутствует
+    </p>
 </div>
 <!-- donor fast guide-->
 <div class="container">
     <div class="general-information">
-        <img width="50%" src="img/Wood.png" alt="wood with hands" />
+        <img width="50%" src="<?php echo get_template_directory_uri(); ?>/images/Wood.png" alt="wood with hands"/>
         <div class="general-information__text">
             <p class="general-information__title">Уважаемые доноры!!!</p>
-            <p class="message">Предварительная запись на донацию крови проводится ежедневно при личном обращении, записаться можно:</p>
+            <p class="message">Предварительная запись на донацию крови проводится ежедневно при личном обращении,
+                записаться можно:</p>
             <ul>
                 <li>В регистратуре с 8:00 до 16:00 (ул. Кабяка 22)</li>
                 <li>По телефону: 8(0232)53-98-32, 8(0232)53-98-14</li>
@@ -157,13 +110,63 @@
 </div>
 <!--fast news container-->
 <div class="container">
+    <p class="container__name text_center">Последние новости</p>
     <div class="news-box">
-        <div class="news-tile"></div>
+        <?php
+        $args_for_get_posts = array( 'numberposts' => 6);
+        foreach (get_posts($args_for_get_posts) as $post){?>
+        <div class="news-tile">
+            <p class="news-tile__title"><?php echo the_title() ?></p>
+            <p class="news-tile__description">
+	            <?php echo the_excerpt() ?>
+            </p>
+            <a href="<?php echo the_permalink() ?>" class="news-tile__link">Перейти</a>
+        </div>
+        <?php } ?>
     </div>
 </div>
-<footer>
-</footer>
-<script src="./js/nav_hamburger.js"></script>
-<script src="./js/blood_status_change.js"></script>
-</body>
-</html>
+<!--statistics for donors-->
+<div class="container container_white">
+    <div class="graph-box" id="costume-chart"></div>
+    <div class="number-of-people">
+        <div class="number-of-people__counter" id="counter-1">
+            <div class="counter__information">
+                <p class="counter__text">цельной крови</p>
+                <p class="counter__value">+21</p>
+            </div>
+            <div class="counter__plank"></div>
+            <div class="counter__information">
+                <p class="counter__text">всего</p>
+                <p class="counter__value">321</p>
+            </div>
+        </div>
+        <div class="number-of-people__counter" id="counter-2">
+            <div class="counter__information">
+                <p class="counter__text">плазма крови</p>
+                <p class="counter__value">+54</p>
+            </div>
+            <div class="counter__plank"></div>
+            <div class="counter__information">
+                <p class="counter__text">всего</p>
+                <p class="counter__value">423</p>
+            </div>
+        </div>
+        <div class="number-of-people__counter" id="counter-3">
+            <div class="counter__information">
+                <p class="counter__text">тромбоцитов</p>
+                <p class="counter__value">+4</p>
+            </div>
+            <div class="counter__plank"></div>
+            <div class="counter__information">
+                <p class="counter__text">всего</p>
+                <p class="counter__value">23</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="<?php echo get_template_directory_uri(); ?>/js/blood_status_change.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/lib/liteChart.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/config/config-graph.js"></script>
+
+<?php get_footer(); ?>
